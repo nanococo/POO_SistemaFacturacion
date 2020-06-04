@@ -1,14 +1,13 @@
 import InvoiceElements.InvoiceBody;
-import InvoiceElements.InvoiceFooter;
 import InvoiceElements.InvoiceHeaderElements.Client;
 import InvoiceElements.InvoiceHeaderElements.InvoiceHeader;
 
 public class MainInvoice {
-    private InvoiceHeader invoiceHeader;
-    private InvoiceBody invoiceBody;
-    private InvoiceFooter invoiceFooter;
+    public InvoiceHeader invoiceHeader;
+    public InvoiceBody invoiceBody;
 
     public MainInvoice(String clientName, Client clientType) {
-        
+        this.invoiceHeader = new InvoiceHeader(clientName, clientType);
+        this.invoiceBody = new InvoiceBody();
     }
 }
